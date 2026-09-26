@@ -1,33 +1,53 @@
 <!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Farm+</title>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <link rel="stylesheet" href="/static/app.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Farm+</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-  <header class="topbar">
-    <div><b>🌾 Farm+</b><span id="season">...</span></div>
-    <div class="coins">🪙 <span id="coins">0</span></div>
-  </header>
-  <main>
-    <section class="hero card">
-      <div><div class="muted">Фермер</div><h1 id="name">Завантаження...</h1><div id="level"></div></div>
-      <div class="balance">💰 <b id="balance">0</b> ₴</div>
-    </section>
-    <section class="weather card"><span id="weather">🌤️</span><div><b id="weatherName">...</b><div id="temp" class="muted"></div></div></section>
-    <nav class="grid">
-      <button data-page="fields">🌾<span>Поля</span></button>
-      <button data-page="warehouse">📦<span>Склад</span></button>
-      <button data-page="garage">🚜<span>Гараж</span></button>
-      <button data-page="livestock">🐄<span>Тварини</span></button>
-      <button data-page="workers">👷<span>Працівники</span></button>
-      <button data-page="orders">📋<span>Замовлення</span></button>
-    </nav>
-    <section id="content" class="card content"><div class="muted">Вибери розділ.</div></section>
-  </main>
-  <script src="/static/app.js"></script>
-</body>
-</html>
+<div class="app">
+<header><b>🌾 FARM+</b><button id="settings">⚙️</button></header>
+<main id="content">
+<section class="hero">
+<div class="avatar">👨‍🌾</div>
+<div class="info">
+<small>Моя ферма</small><h1>Фермер</h1>
+<div>💰 <b>125 430</b> ₴ &nbsp; 🪙 <b>20</b> FC</div>
+<div class="muted">⭐ Рівень 4 &nbsp; XP 65%</div>
+<div class="xp"><i></i></div>
+</div></section>
+
+<section><div class="title"><h2>🌱 ПОЛЯ</h2><button data-page="fields">Усі →</button></div>
+<div class="fields">
+<button data-page="fields">🟫 <span><b>Поле №1</b><small>🌾 Пшениця</small></span>›</button>
+<button data-page="fields">🟩 <span><b>Поле №2</b><small>🌻 Соняшник</small></span>›</button>
+<button data-page="fields">🟫 <span><b>Поле №3</b><small>🥔 Картопля</small></span>›</button>
+</div></section>
+
+<section><h2>⚡ РОЗДІЛИ</h2>
+<div class="tiles">
+<button data-page="production">🏭<b>Виробництво</b></button>
+<button data-page="garage">🚜<b>Техніка</b></button>
+<button data-page="warehouse">📦<b>Склад</b></button>
+<button data-page="animals">🐄<b>Тварини</b></button>
+<button data-page="workers">👷<b>Працівники</b></button>
+<button data-page="orders">📋<b>Замовлення</b></button>
+</div></section>
+
+<section class="quick">
+<div>🌦️ <b>Погода</b><small>☀️ Ясно · +24°C</small></div>
+<div>🍂 <b>Сезон</b><small>Літо · Місяць 6</small></div>
+</section>
+</main>
+<nav>
+<button class="active" data-page="home">🏠<small>Головна</small></button>
+<button data-page="garage">🚜<small>Техніка</small></button>
+<button data-page="warehouse">📦<small>Склад</small></button>
+<button data-page="profile">👤<small>Профіль</small></button>
+</nav>
+</div>
+<script src="script.js"></script>
+</body></html>
